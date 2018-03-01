@@ -1,0 +1,17 @@
+{
+  "name": "cristian-bot",
+  "version": "1.0.0",
+  "description": "Bot de pruebas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "keretano",
+  "license": "ISC",
+  "dependencies": {
+    "cool-ascii-faces": "1.3.4",
+    "discord.js": "^11.3.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
