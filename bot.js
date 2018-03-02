@@ -11,7 +11,7 @@ bot.on('message', (message) => {
     }
     if (message.content == '.valor'){
             message.channel.sendMessage('no funciona jaja');
-            message.author.addRole('Valor'); 
+            message.member.addRole('Valor'); 
     }
     if (message.content == 'adios'){
             message.channel.sendMessage('Bye');
