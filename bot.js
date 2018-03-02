@@ -7,11 +7,13 @@ bot.on('message', (message) => {
             message.channel.sendMessage('Hola! :D');
     }
     if (message.content == 'muestrate'){       
-            message.channel.sendMessage('https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png');
-            
+            message.channel.sendMessage('https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png');           
     }
     if (message.content == '.valor'){
             message.author.addRole('Valor');
+    }
+    if (message.content == 'adios'){
+            message.author.addRole('Bye');
     }
 });
 
