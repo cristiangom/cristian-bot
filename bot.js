@@ -6,7 +6,12 @@ bot.on('message', (message) => {
     if (message.content == 'hola'){
             message.channel.sendMessage('Hola! :D');
     }
-    if (message.content == 'muestrate'){                      message.channel.sendMessage('https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png');
+    if (message.content == 'muestrate'){       
+            message.channel.sendMessage('https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png');
+    }
+    if (message.content == 'valor'){
+           role = discord.utils.get(server.roles, name="Valor")
+           await client.add_roles(member, role)
     }
 });
 
