@@ -9,6 +9,7 @@ bot.on('message', (message) => {
     if (message.content == 'muestrate'){                      message.channel.sendMessage('https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png');
     }
 });
-bot.login('NDE2MTI2MjYwMDA4NDUyMDk2.DXAIpw.BJUGB6Mw1-ocMPWLOGAanRebMH4');
+
+bot.login(process.env.BOT_TOKEN);
 
 
