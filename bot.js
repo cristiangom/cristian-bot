@@ -13,7 +13,7 @@ bot.on('message', (message) => {
             message.author.addRole('Valor');
     }
     if (message.content == 'adios'){
-            message.author.addRole('Bye');
+            message.channel.sendMessage('Bye');
     }
 });
 
