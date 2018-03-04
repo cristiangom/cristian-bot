@@ -11,7 +11,9 @@ bot.on('message', (message) => {
     }
     if (message.content == '.valor'){
             message.channel.sendMessage('no funciona jaja');
-            member.addRole('keretano','Valor'); 
+            let userToModify = message.mentions.users.first();
+            let roleToAdd = message.mentions.roles.first();
+            userToModify.addRole(roleToAdd);
     }
     if (message.content == 'ro'){
             message.channel.sendMessage('do');
