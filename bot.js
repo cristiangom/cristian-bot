@@ -11,7 +11,7 @@ bot.on('message', (message) => {
     }
     if (message.content == '.valor'){
             message.channel.sendMessage('no funciona jaja');
-            const guildMember = message.member;
+            const guildMember = "message.member";
             //let userToModify = message.mentions.users.first();
             message.channel.sendMessage(guildMember);
             message.channel.sendMessage('prueba');
