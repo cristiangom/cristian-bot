@@ -11,9 +11,8 @@ bot.on('message', (message) => {
     }
     if (message.content == '.valor'){
             message.channel.sendMessage('no funciona jaja');
-            let prueba = "prueba";
-            message.channel.sendMessage(prueba);
-            //let userToModify = message.mentions.users.first();
+            let userToModify = message.mentions.users.first();
+            message.channel.sendMessage(userToModify);
             //let roleToAdd = "419729893719539713"
             //userToModify.addRole(roleToAdd);
     }
