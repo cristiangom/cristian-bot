@@ -16,6 +16,9 @@ bot.on('message', (message) => {
     if (message.content == 'adios'){
             message.channel.sendMessage('Bye');
     }
+    if (message.content == 'prueba'){
+            message.channel.sendMessage('discord');
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
