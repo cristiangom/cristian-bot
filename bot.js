@@ -13,8 +13,8 @@ bot.on('message', (message) => {
             message.channel.sendMessage('no funciona jaja');
             message.member.addRole('Valor'); 
     }
-    if (message.content == 'adios'){
-            message.channel.sendMessage('Bye');
+    if (message.content == 'ro'){
+            message.channel.sendMessage('do');
     }
     if (message.content == 'prueba'){
             message.channel.sendMessage('discord');
