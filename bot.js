@@ -11,15 +11,17 @@ bot.on('message', (message) => {
     }
     if (message.content == '.valor'){
             message.channel.sendMessage('no funciona jaja');
-            let userToModify = message.mentions.users.first();
-            message.channel.sendMessage(userToModify);
+            const guildMember = message.member;
+            //let userToModify = message.mentions.users.first();
+            message.channel.sendMessage(guildMember);
+            message.channel.sendMessage('prueba');
             //let roleToAdd = "419729893719539713"
             //userToModify.addRole(roleToAdd);
     }
     if (message.content == 'ro'){
             message.channel.sendMessage('do');
     }
-    if (message.content == 'prueba'){
+    if (message.content == '.prueba'){
             message.channel.sendMessage('discord');
     }
 });
