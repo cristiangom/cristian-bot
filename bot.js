@@ -6,6 +6,12 @@ bot.on('ready', () => {
     bot.user.setActivity('Pokémon Go');
 });
 
+bot.on("guildMemberAdd", (member) => {
+  //console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+  //member.guild.channels.get("welcome").send(`"${member.user.username}" has joined this server`);
+   member.guild.channels.find("name","yo-te-elijo").send("Hola bienvenido al servidor de PokémonGO-Querétaro.\nAntes de empezar necesitas elegir a qué facción perteneces de acuerdo a tu forma de juego para ver los demás canales y así empezar tu aventura. Es importante que decidas bien para que puedas aprovechar al máximo el grupo.\nEscribe: \n`.soyArticuno` si eres del equipo __Sabiduría__ y juegas de forma __aérea__. \n`.soyZapdos` si eres del equipo __Instinto__ y juegas de forma __aérea__. \n`.soyMoltres` si eres del equipo __Valor__ y juegas de forma __aérea__. \n`.soySuicune` si eres del equipo __Sabiduría__ y juegas de forma __presencial__. \n`.soyRaikou` si eres del equipo __Instinto__ y juegas de forma __presencial__. \n`.soyEntei` si eres del equipo __Valor__ y juegas de forma __presencial__.");
+});
+
 bot.on('message', (message) => {
     
     if (message.content == '.hola'){
@@ -19,13 +25,14 @@ bot.on('message', (message) => {
     }
     
     
+    
     try {
     
         if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
             //Pues no se me ocurrio nada mas
         } else {
             
-            var reglamento = message.member.guild.channels.find('id','419575498427858944');
+            var reglamento = message.member.guild.channels.find('name','reglamento');
             
             if (message.content == '.soyArticuno'){
                     var role = message.member.guild.roles.find('name','Articuno');    
