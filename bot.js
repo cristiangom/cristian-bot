@@ -14,60 +14,78 @@ bot.on("guildMemberAdd", (member) => {
 
 bot.on('message', (message) => {
     
-    if (message.content == '.hola'){
-            message.channel.sendMessage('Hola! :D');
-    }
-    if (message.content == 'muestrate'){       
-            message.channel.sendMessage('https://gph.is/1UORtsw');           
-    }
-    if (message.content == '.oak'){
-           message.channel.sendMessage('https://cdn.discordapp.com/attachments/416329673631334429/420420381384638465/tumblr_lj4xh4rZOY1qduaebo1_500.jpg');
-    }
+     setTimeout(() => { 
     
-    
-    
-    try {
-    
-        if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
-            //Pues no se me ocurrio nada mas
-        } else {
-            
-            var reglamento = message.member.guild.channels.find('name','reglamento');
-            
-            if (message.content == '.soyArticuno'){
-                    var role = message.member.guild.roles.find('name','Articuno');    
-                    message.member.addRole(role);
-                    message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","articuno").send("https://cdn.discordapp.com/attachments/416329673631334429/420041376881836033/Team_Mystic2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");
-            }        
-             if (message.content == '.soyZapdos'){
-                    var role = message.member.guild.roles.find('name','Zapdos');
-                    message.member.addRole(role).catch(console.error);
-                    message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","zapdos").send("https://cdn.discordapp.com/attachments/416329673631334429/420041305188466689/Team_Instinct2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");  
-                    
-            }
-            if (message.content == '.soyMoltres'){
-                    var role = message.member.guild.roles.find('name','Moltres');
-                    message.member.addRole(role).catch(console.error);
-                    message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","moltres").send("https://cdn.discordapp.com/attachments/416329673631334429/420041466019184640/Team_Valor2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo."); 
-            }
-            if (message.content == '.soySuicune'){
-                    var role = message.member.guild.roles.find('name','Suicune');
-                    message.member.addRole(role).catch(console.error);
-                    message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","suicune").send("https://cdn.discordapp.com/attachments/416329673631334429/420041433362333706/Team_Suicune2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo."); 
-            }
-            if (message.content == '.soyRaikou'){
-                    var role = message.member.guild.roles.find('name','Raikou');
-                    message.member.addRole(role).catch(console.error);
-                    message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");   message.member.guild.channels.find("name","raikou").send("https://cdn.discordapp.com/attachments/416329673631334429/420041398486827010/Team_Raikou2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");
-            }
-            if (message.content == '.soyEntei'){
-                    var role = message.member.guild.roles.find('name','Entei');
-                    message.member.addRole(role).catch(console.error);
-                    message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");       message.member.guild.channels.find("name","entei").send("https://cdn.discordapp.com/attachments/416329673631334429/420041235626065920/Team_Entei2.png \n ¡" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.");
-                
-            }
-                
+        if (message.content == '.hola'){
+                const embed = new Discord.RichEmbed().setImage('https://goo.gl/zmLJ65');
+                message.channel.send("!" + message.member.user + "a", {embed});
         }
+        if (message.content == 'muestrate'){       
+                message.channel.sendMessage('https://gph.is/1UORtsw');           
+        }
+        if (message.content == '.oak'){
+               message.channel.sendMessage('https://cdn.discordapp.com/attachments/416329673631334429/420420381384638465/tumblr_lj4xh4rZOY1qduaebo1_500.jpg');
+        }
+        if (message.content == '.sasugo'){
+               message.author.send('Felicidades ' + message.member.user +  ', el servidor de PokémonGO-Querétaro te felicita en especial los administradores. Eres una gran persona para esta comunidad y para la amistad de tantos años. Te mandamos un fuerte abrazo y esperamos que sigan pasando los años.');
+        }
+    
+    
+   if(message.member.roles.some(r=>["Articuno", "Zapdos","Moltres","Suicune","Raikou","Entei"].includes(r.name)) ) {
+                //Pues no se me ocurrio nada mas
+            } else {
+
+                var reglamento = message.member.guild.channels.find('name','reglamento');
+
+                if (message.content == '.soyArticuno'){
+                        var role = message.member.guild.roles.find('name','Articuno');    
+                        message.member.addRole(role);
+                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");
+                        var embed = new Discord.RichEmbed().setImage('https://goo.gl/EtTg7v');
+                        message.member.guild.channels.find("name","articuno").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});                   
+
+                }        
+                 if (message.content == '.soyZapdos'){
+                        var role = message.member.guild.roles.find('name','Zapdos');
+                        message.member.addRole(role).catch(console.error);
+                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");
+                        var embed = new Discord.RichEmbed().setImage('https://goo.gl/1G7K5v');
+                        message.member.guild.channels.find("name","zapdos").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+
+                }
+                if (message.content == '.soyMoltres'){
+                        var role = message.member.guild.roles.find('name','Moltres');
+                        message.member.addRole(role).catch(console.error);
+                        message.member.guild.channels.find("name","3-colores-lugia").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera aérea. Recuerda leer el " + reglamento + " para evitar sanciones.");   
+                        const embed = new Discord.RichEmbed().setImage('https://goo.gl/QipBbi');
+                        message.member.guild.channels.find("name","moltres").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                }
+                if (message.content == '.soySuicune'){
+                        var role = message.member.guild.roles.find('name','Suicune');
+                        message.member.addRole(role).catch(console.error);
+                        message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");    
+                        const embed = new Discord.RichEmbed().setImage('https://goo.gl/6XqcBy');
+                        message.member.guild.channels.find("name","suicune").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                    
+                }
+                if (message.content == '.soyRaikou'){
+                        var role = message.member.guild.roles.find('name','Raikou');
+                        message.member.addRole(role).catch(console.error);
+                        message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");   
+                        const embed = new Discord.RichEmbed().setImage('https://goo.gl/ADA4Px');
+                        message.member.guild.channels.find("name","raikou").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+                    
+                }
+                if (message.content == '.soyEntei'){
+                        var role = message.member.guild.roles.find('name','Entei');
+                        message.member.addRole(role).catch(console.error);
+                        message.member.guild.channels.find("name","3-colores-ho-oh").send("!Bienvenido " + message.member.user + " al chat general 3 colores!. Conoce otras personas que juegan de manera presencial. Recuerda leer el " + reglamento + " para evitar sanciones.");     
+                        const embed = new Discord.RichEmbed().setImage('https://goo.gl/xSnLrx');
+                        message.member.guild.channels.find("name","raikou").send("!" + message.member.user + " pone los <:cebos:420281307621490688>!, saluda a los demás miembros de tu equipo.", {embed});
+
+                }
+            }
+         
         
         
         if(message.content == ".exParqueAra" && !message.member.roles.some(r=>["ex-Ara"].includes(r.name) )){
@@ -155,7 +173,7 @@ bot.on('message', (message) => {
         console.error(e);
     }
    
-    
+     }, 500);   
 });
 
 
